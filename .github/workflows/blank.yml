@@ -80,6 +80,10 @@ jobs:
         #export KBUILD_BUILD_HOST=企鹅交流:722651738
         #export KBUILD_BUILD_USER=kuan-jsbsbxjxh66
         sed -i '444d' Makefile
+        sed -i '65,70d' scripts/drvgen/drvgen.mk
+        sed -i '69d' scripts/drvgen/drvgen.mk
+        sed -i '315,322d' scripts/Makefile.lib
+        sed -i '321d' scripts/Makefile.lib
         sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-9 100
         sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-9 100
         make -s -j$(nproc --all) O=out ARCH=arm64 oppo6853_defconfig
