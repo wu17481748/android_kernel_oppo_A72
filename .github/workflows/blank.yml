@@ -1,8 +1,15 @@
 name: 编译OPPO A72 mt6853机型内核
 
 on:
-  workflow_dispatch:
+  # Triggers the workflow on push or pull request events but only for the "安卓10" branch
+  push:
+    branches: [ "安卓10" ]
+  pull_request:
+    branches: [ "安卓10" ]
 
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
 jobs:
   build:
 
