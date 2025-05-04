@@ -53,7 +53,11 @@ jobs:
         git clone https://github.com/wu17481748/android_kernel_oppo_A72 android-kernel
         cd android-kernel
 
-
+    - name: 切换python2.7
+      run: |
+       sudo rm /bin/python
+       sudo ln -s /bin/python2.7 /bin/python
+       
 
     - name: 跳过更新 ksu
       run: |
