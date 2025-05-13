@@ -1,9 +1,9 @@
 name: 编译OPPO A72 安卓10 mt6853机型内核
 
 on:
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  push:
+  schedule:
+  - cron: '0 15 * * 0'
   
 jobs:
   build:
